@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mis Links · Promotor Claro</title>
+<meta name="description" content="Accesos rápidos a las herramientas de un promotor Claro: cobertura, simuladores, validación y factibilidad.">
+<meta name="theme-color" content="#C8102E">
+<link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIk1pcyBMaW5rcyAtIFByb21vdG9yIiwKICAic2hvcnRfbmFtZSI6ICJNaXMgTGlua3MiLAogICJkZXNjcmlwdGlvbiI6ICJBY2Nlc29zIHLDoXBpZG9zIGEgbGFzIGhlcnJhbWllbnRhcyBkZSB1biBwcm9tb3RvcjogY29iZXJ0dXJhLCBzaW11bGFkb3JlcywgdmFsaWRhY2nDs24geSBmYWN0aWJpbGlkYWQuIiwKICAic3RhcnRfdXJsIjogIi4vaW5kZXguaHRtbCIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzFBMTQxMCIsCiAgInRoZW1lX2NvbG9yIjogIiNDODEwMkUiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbCwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgMTAwIDEwMCclM0UlM0NyZWN0IHdpZHRoPScxMDAnIGhlaWdodD0nMTAwJyByeD0nMjAnIGZpbGw9JyUyM0M4MTAyRScvJTNFJTNDdGV4dCB4PSc1MCcgeT0nNjgnIGZvbnQtc2l6ZT0nNTgnIGZvbnQtZmFtaWx5PSdBcmlhbCBCbGFjaywgc2Fucy1zZXJpZicgZmlsbD0nd2hpdGUnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGZvbnQtd2VpZ2h0PSc5MDAnJTNFTSUzQy90ZXh0JTNFJTNDL3N2ZyUzRSIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICAgIH0sCiAgICB7CiAgICAgICJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sLCUzQ3N2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMDAgMTAwJyUzRSUzQ3JlY3Qgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnIHJ4PScyMCcgZmlsbD0nJTIzQzgxMDJFJy8lM0UlM0N0ZXh0IHg9JzUwJyB5PSc2OCcgZm9udC1zaXplPSc1OCcgZm9udC1mYW1pbHk9J0FyaWFsIEJsYWNrLCBzYW5zLXNlcmlmJyBmaWxsPSd3aGl0ZScgdGV4dC1hbmNob3I9J21pZGRsZScgZm9udC13ZWlnaHQ9JzkwMCclM0VNJTNDL3RleHQlM0UlM0Mvc3ZnJTNFIiwKICAgICAgInNpemVzIjogIjUxMng1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfQogIF0KfQo=">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23C8102E'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial Black, sans-serif' fill='white' text-anchor='middle' font-weight='900'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23C8102E'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial Black, sans-serif' fill='white' text-anchor='middle' font-weight='900'%3EM%3C/text%3E%3C/svg%3E">
+
+<!--
+  NOTA TÉCNICA: esta versión NO depende de ningún CDN externo (ni Tailwind ni
+  Google Fonts) para que funcione siempre, incluso abriendo el archivo
+  directo con doble clic (file://), donde los navegadores bloquean scripts
+  externos por seguridad. Todo el diseño está en el <style> de abajo.
+-->
+<style>
+  /* ============ RESET Y BASE ============ */
+  *, *::before, *::after{ box-sizing: border-box; margin:0; padding:0; }
+  html, body{ -webkit-tap-highlight-color: transparent; }
+
+  :root{
+    --rojo:        #C8102E;
+    --rojo-fuerte:  #E0143A;
+    --tinta:        #18120F;
+    --tinta-2:      #221A15;
+    --hueso:        #F4EFE6;
+    --hueso-60:     rgba(244,239,230,0.6);
+    --hueso-45:     rgba(244,239,230,0.45);
+    --hueso-30:     rgba(244,239,230,0.3);
+    --hueso-15:     rgba(244,239,230,0.13);
+    --hueso-08:     rgba(244,239,230,0.07);
+    --ambar:        #E8A33D;
+    --verde:        #3C9468;
+
+    --radio-lg: 18px;
+    --radio-md: 12px;
+  }
+
+  body{
+    background-color: var(--tinta);
+    background-image:
+      radial-gradient(circle at 10% 8%, rgba(200,16,46,0.22), transparent 36%),
+      radial-gradient(circle at 95% 80%, rgba(232,163,61,0.10), transparent 40%);
+    color: var(--hueso);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    line-height: 1.4;
+  }
+
+  .grano{
+    position:fixed; inset:0; pointer-events:none; opacity:.045; mix-blend-mode:overlay; z-index:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .envoltorio{
+    position: relative;
+    z-index: 1;
+    max-width: 460px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 20px 40px;
+  }
+
+  /* ============ TIPOGRAFÍA ============ */
+  .titulo-marca{
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 32px;
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+  }
+  .mono{
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.06em;
+  }
+
+  /* ============ HEADER ============ */
+  header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    gap: 12px;
+  }
+  .estado-linea{
+    display:flex; align-items:center; gap:7px;
+    margin-bottom: 9px;
+  }
+  .punto-vivo{
+    width:8px; height:8px; border-radius:50%;
+    background: var(--verde);
+    box-shadow: 0 0 0 0 rgba(60,148,104,0.55);
+    animation: pulso 2.2s infinite;
+    flex-shrink:0;
+  }
+  @keyframes pulso{
+    0%{ box-shadow:0 0 0 0 rgba(60,148,104,0.55); }
+    70%{ box-shadow:0 0 0 6px rgba(60,148,104,0); }
+    100%{ box-shadow:0 0 0 0 rgba(60,148,104,0); }
+  }
+  #estado-conexion{ font-size: 10px; color: var(--hueso-45); text-transform: uppercase; }
+
+  .rojo-resalte{ color: var(--rojo-fuerte); }
+
+  /* barras de señal decorativas en el header */
+  .barras{ display:flex; align-items:flex-end; gap:3px; height:34px; flex-shrink:0; margin-top: 4px; }
+  .barra{ width:6px; border-radius:2px; background: var(--hueso-15); }
+  .barra.on{ background: var(--ambar); }
+
+  .subtitulo{
+    font-size: 13px;
+    color: var(--hueso-60);
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--hueso-08);
+  }
+
+  /* ============ BUSCADOR ============ */
+  .buscador-caja{ position: relative; margin-bottom: 22px; }
+  .buscador-caja svg{
+    position:absolute; left:14px; top:50%; transform:translateY(-50%);
+    width:16px; height:16px; color: var(--hueso-45); pointer-events:none;
+  }
+  #buscador{
+    width:100%;
+    background: var(--hueso-08);
+    border: 1px solid var(--hueso-15);
+    border-radius: var(--radio-md);
+    padding: 13px 16px 13px 42px;
+    font-size: 14px;
+    color: var(--hueso);
+    font-family: inherit;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  #buscador::placeholder{ color: var(--hueso-45); }
+  #buscador:focus{
+    outline:none;
+    border-color: var(--ambar);
+    background: rgba(244,239,230,0.04);
+  }
+
+  /* ============ TARJETAS ============ */
+  #lista{ display:flex; flex-direction:column; gap:12px; flex:1; }
+
+  .tarjeta{
+    background: linear-gradient(165deg, rgba(244,239,230,0.055), rgba(244,239,230,0.015));
+    border: 1px solid var(--hueso-15);
+    border-radius: var(--radio-lg);
+    padding: 16px;
+    display:flex;
+    gap: 13px;
+    align-items: flex-start;
+    transition: transform .12s ease, border-color .12s ease;
+    animation: aparece .4s ease both;
+  }
+  .tarjeta:active{ transform: scale(0.98); }
+
+  @keyframes aparece{
+    from{ opacity:0; transform: translateY(10px); }
+    to{ opacity:1; transform: translateY(0); }
+  }
+
+  .tarjeta-icono{
+    width: 42px; height:42px;
+    border-radius: 12px;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    margin-top: 2px;
+  }
+  .tarjeta-icono svg{ width:20px; height:20px; }
+
+  .tarjeta-cuerpo{ flex:1; min-width:0; }
+
+  .tarjeta-etiqueta{
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .tarjeta-titulo{
+    font-size: 15.5px;
+    font-weight: 700;
+    margin-top: 4px;
+    line-height: 1.3;
+    color: var(--hueso);
+  }
+  .tarjeta-para{
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: var(--hueso-45);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+  }
+  .tarjeta-desc{
+    font-size: 12.5px;
+    color: var(--hueso-60);
+    margin-top: 9px;
+    line-height: 1.5;
+  }
+
+  .tarjeta-acciones{ display:flex; gap:8px; margin-top:13px; }
+  .btn-abrir{
+    flex: 1;
+    text-align:center;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--tinta);
+    border-radius: 10px;
+    padding: 11px 0;
+    text-decoration: none;
+    display:flex; align-items:center; justify-content:center; gap:6px;
+    transition: transform .1s ease, filter .1s ease;
+  }
+  .btn-abrir:active{ transform: scale(0.96); filter: brightness(0.95); }
+  .btn-abrir svg{ width:14px; height:14px; }
+
+  .btn-copiar{
+    width: 42px; height: 42px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    border-radius: 10px;
+    border: 1px solid var(--hueso-15);
+    background: transparent;
+    color: var(--hueso-60);
+    cursor: pointer;
+    transition: transform .1s ease, background .12s ease;
+  }
+  .btn-copiar:active{ transform: scale(0.92); background: var(--hueso-08); }
+  .btn-copiar svg{ width:16px; height:16px; }
+
+  /* paleta por color de acento — clases explícitas, sin "magia" de variables CSS dinámicas */
+  .acento-rojo    .tarjeta-icono{ background: rgba(200,16,46,0.16); color: var(--rojo-fuerte); }
+  .acento-rojo    .tarjeta-etiqueta{ color: var(--rojo-fuerte); }
+  .acento-rojo    .btn-abrir{ background: var(--rojo-fuerte); }
+
+  .acento-verde   .tarjeta-icono{ background: rgba(60,148,104,0.16); color: var(--verde); }
+  .acento-verde   .tarjeta-etiqueta{ color: var(--verde); }
+  .acento-verde   .btn-abrir{ background: var(--verde); }
+
+  .acento-ambar   .tarjeta-icono{ background: rgba(232,163,61,0.18); color: var(--ambar); }
+  .acento-ambar   .tarjeta-etiqueta{ color: var(--ambar); }
+  .acento-ambar   .btn-abrir{ background: var(--ambar); }
+
+  #sin-resultados{
+    display:none;
+    text-align:center;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--hueso-45);
+    margin-top: 40px;
+  }
+
+  /* ============ BOTÓN INSTALAR ============ */
+  #btn-instalar{
+    display:none;
+    margin-top: 22px;
+    width: 100%;
+    background: var(--rojo-fuerte);
+    color: var(--hueso);
+    font-weight: 700;
+    font-size: 14px;
+    font-family: inherit;
+    border: none;
+    border-radius: var(--radio-md);
+    padding: 14px 0;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    transition: transform .1s ease;
+  }
+  #btn-instalar:active{ transform: scale(0.97); }
+
+  /* ============ FOOTER ============ */
+  footer{
+    margin-top: 28px;
+    text-align:center;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: var(--hueso-30);
+    line-height: 1.6;
+  }
+
+  /* ============ TOAST ============ */
+  #toast{
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    opacity: 0;
+    background: var(--hueso);
+    color: var(--tinta);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 11px 18px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    z-index: 50;
+    pointer-events: none;
+    transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .35s ease;
+    display:flex; align-items:center; gap:8px;
+  }
+  #toast.visible{ transform: translate(-50%, 0); opacity: 1; }
+  #toast svg{ width:14px; height:14px; color: var(--verde); }
+
+  /* ============ ACCESIBILIDAD ============ */
+  a:focus-visible, button:focus-visible, input:focus-visible{
+    outline: 2px solid var(--ambar);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .punto-vivo, .tarjeta{ animation: none; }
+    .tarjeta, .btn-abrir, .btn-copiar, #btn-instalar{ transition: none; }
+  }
+</style>
+</head>
+<body>
+<div class="grano"></div>
+
+<div class="envoltorio">
+
+  <header>
+    <div>
+      <div class="estado-linea">
+        <span class="punto-vivo"></span>
+        <span id="estado-conexion" class="mono">en línea</span>
+      </div>
+      <h1 class="titulo-marca">Mis Links<span class="rojo-resalte">.</span></h1>
+    </div>
+
+    <div class="barras" aria-hidden="true">
+      <div class="barra on" style="height:32%"></div>
+      <div class="barra on" style="height:52%"></div>
+      <div class="barra on" style="height:72%"></div>
+      <div class="barra on" style="height:100%"></div>
+      <div class="barra" style="height:100%"></div>
+    </div>
+  </header>
+
+  <p class="subtitulo">Panel del promotor — cobertura, registro de ventas y validación, todo en un toque.</p>
+
+  <div class="buscador-caja">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+    <input id="buscador" type="text" inputmode="search" autocomplete="off" placeholder="Buscar herramienta… (ej. cobertura, IMEI)">
+  </div>
+
+  <main id="lista"></main>
+
+  <p id="sin-resultados">Sin coincidencias. Probá con otra palabra.</p>
+
+  <button id="btn-instalar">Instalar app en el celular</button>
+
+  <footer>
+    Hecho para uso diario en campo · Funciona sin internet tras la primera carga<br>
+    Los enlaces externos requieren conexión para abrir.
+  </footer>
+</div>
+
+<div id="toast">
+  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+  <span>Link copiado</span>
+</div>
+
+<script>
+/* ============== DATOS: TUS HERRAMIENTAS ============== */
+const HERRAMIENTAS = [
+  {
+    nombre: "Checa tu Señal (OSIPTEL)",
+    para: "Cobertura",
+    acento: "verde",
+    icono: "signal",
+    desc: "Mapa oficial de cobertura 2G/3G/4G/5G por operador y dirección. Úsalo para mostrarle al cliente la cobertura real de Claro en su zona antes de vender.",
+    url: "https://checatusenal.osiptel.gob.pe/",
+    tag: "Oficial · OSIPTEL"
+  },
+  {
+    nombre: "Simulador de Registro de Ventas",
+    para: "Prepago / Pospago / Fija",
+    acento: "rojo",
+    icono: "carrito",
+    desc: "Simula el flujo de registro de una venta antes de hacerla real: prepago, pospago o línea fija. Sirve para practicar el proceso sin riesgo de error.",
+    url: "https://goo.su/FhiJwB",
+    tag: "Interno · Claro"
+  },
+  {
+    nombre: "Validación del Correo Electrónico",
+    para: "Proceso de venta",
+    acento: "ambar",
+    icono: "correo",
+    desc: "Guía interactiva paso a paso para validar que el correo del cliente existe y es correcto antes de registrar la venta.",
+    url: "https://view.genially.com/6a0f5fc613d26df985d5dd99",
+    tag: "Guía · Genially"
+  },
+  {
+    nombre: "Portal de Factibilidad",
+    para: "Línea Fija / Instalación",
+    acento: "rojo",
+    icono: "mapa",
+    desc: "Consulta si una dirección tiene factibilidad técnica para instalar el servicio fijo antes de cerrar la venta.",
+    url: "https://goo.su/vbpm6kf",
+    tag: "Interno · Claro"
+  },
+];
+
+const ICONOS = {
+  signal:  `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 20h.01M8 20v-4M13 20v-8M18 20V8M3 17l5-5 5 3 7-9"/>`,
+  carrito: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293A1 1 0 0 0 5.414 17H17M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>`,
+  correo:  `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/>`,
+  mapa:    `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/>`,
+};
+
+const ICONO_COPIAR = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2m-6 12h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z"/>`;
+
+const lista = document.getElementById('lista');
+const sinResultados = document.getElementById('sin-resultados');
+
+function render(items){
+  lista.innerHTML = "";
+  sinResultados.style.display = items.length === 0 ? 'block' : 'none';
+
+  items.forEach((h, i) => {
+    const card = document.createElement('div');
+    card.className = `tarjeta acento-${h.acento}`;
+    card.style.animationDelay = `${i * 0.05}s`;
+    card.innerHTML = `
+      <div class="tarjeta-icono">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">${ICONOS[h.icono]}</svg>
+      </div>
+      <div class="tarjeta-cuerpo">
+        <span class="tarjeta-etiqueta">${h.tag}</span>
+        <h2 class="tarjeta-titulo">${h.nombre}</h2>
+        <p class="tarjeta-para">${h.para}</p>
+        <p class="tarjeta-desc">${h.desc}</p>
+        <div class="tarjeta-acciones">
+          <a class="btn-abrir" href="${h.url}" target="_blank" rel="noopener">
+            Abrir
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <button class="btn-copiar" data-url="${h.url}" aria-label="Copiar enlace de ${h.nombre}">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">${ICONO_COPIAR}</svg>
+          </button>
+        </div>
+      </div>
+    `;
+    lista.appendChild(card);
+  });
+
+  lista.querySelectorAll('.btn-copiar').forEach(btn => {
+    btn.addEventListener('click', () => copiarLink(btn.dataset.url));
+  });
+}
+
+function copiarLink(url){
+  const hacerToast = () => mostrarToast();
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(url).then(hacerToast).catch(() => copiarConTextarea(url, hacerToast));
+  } else {
+    copiarConTextarea(url, hacerToast);
+  }
+}
+
+function copiarConTextarea(url, cb){
+  const t = document.createElement('textarea');
+  t.value = url;
+  t.style.position = 'fixed';
+  t.style.opacity = '0';
+  document.body.appendChild(t);
+  t.focus();
+  t.select();
+  try { document.execCommand('copy'); cb(); } catch(e) {}
+  t.remove();
+}
+
+function mostrarToast(){
+  const toast = document.getElementById('toast');
+  toast.classList.add('visible');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => toast.classList.remove('visible'), 1700);
+}
+
+render(HERRAMIENTAS);
+
+/* Buscador en vivo */
+document.getElementById('buscador').addEventListener('input', (e) => {
+  const q = e.target.value.trim().toLowerCase();
+  if(!q){ render(HERRAMIENTAS); return; }
+  render(HERRAMIENTAS.filter(h =>
+    h.nombre.toLowerCase().includes(q) ||
+    h.para.toLowerCase().includes(q) ||
+    h.desc.toLowerCase().includes(q) ||
+    h.tag.toLowerCase().includes(q)
+  ));
+});
+
+/* Estado de conexión real */
+function actualizarEstado(){
+  const el = document.getElementById('estado-conexion');
+  el.textContent = navigator.onLine ? "en línea" : "sin conexión · modo offline";
+}
+window.addEventListener('online', actualizarEstado);
+window.addEventListener('offline', actualizarEstado);
+actualizarEstado();
+
+/* ============== PWA: instalación y offline (todo en este mismo archivo) ==============
+   El Service Worker normalmente vive en un archivo .js aparte porque el navegador
+   lo pide como recurso independiente. Para mantener TODO en este único index.html,
+   generamos su código como texto y lo registramos como un archivo "virtual" (Blob).
+   Nota: esto solo funciona al servir el archivo por http/https, no con file://
+   — es una regla de seguridad del navegador, no algo que dependa de este código. */
+const CODIGO_SW = `
+  const CACHE_NAME = 'mis-links-promotor-v1';
+  self.addEventListener('install', (event) => {
+    event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.add(self.registration.scope)));
+    self.skipWaiting();
+  });
+  self.addEventListener('activate', (event) => {
+    event.waitUntil(
+      caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k))))
+    );
+    self.clients.claim();
+  });
+  self.addEventListener('fetch', (event) => {
+    const url = new URL(event.request.url);
+    if (url.origin !== self.location.origin) return;
+    event.respondWith(
+      caches.match(event.request).then((cached) => {
+        if (cached) return cached;
+        return fetch(event.request).then((response) => {
+          return caches.open(CACHE_NAME).then((cache) => { cache.put(event.request, response.clone()); return response; });
+        }).catch(() => cached);
+      })
+    );
+  });
+`;
+
+if ('serviceWorker' in navigator && (location.protocol === 'http:' || location.protocol === 'https:')) {
+  const blobSW = new Blob([CODIGO_SW], { type: 'application/javascript' });
+  navigator.serviceWorker.register(URL.createObjectURL(blobSW)).catch(() => {});
+}
+
+let deferredPrompt;
+const btnInstalar = document.getElementById('btn-instalar');
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  btnInstalar.style.display = 'block';
+});
+btnInstalar.addEventListener('click', async () => {
+  if (!deferredPrompt) return;
+  deferredPrompt.prompt();
+  await deferredPrompt.userChoice;
+  deferredPrompt = null;
+  btnInstalar.style.display = 'none';
+});
+window.addEventListener('appinstalled', () => { btnInstalar.style.display = 'none'; });
+</script>
+</body>
+</html>
